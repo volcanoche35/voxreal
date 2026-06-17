@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "VoxReal — Gerçek olsun, etkisi olsun.",
+    "description": "VoxReal küresel bir anket platformudur. Önemli anketler oluşturun, paylaşın ve oy verin. Sesini duyur."
+  },
+  "nav": {
+    "feed": "Akış",
+    "create": "Oluştur",
+    "profile": "Profil",
+    "signIn": "Giriş Yap",
+    "signOut": "Çıkış Yap"
+  },
+  "home": {
+    "slogan": "Gerçek olsun. Etkisi olsun.",
+    "description": "Önemli anketler oluştur. Dünyayla paylaş. Her ses duyulsun.",
+    "createPoll": "Anket Oluştur",
+    "browsePolls": "Anketleri Keşfet",
+    "features": {
+      "create": {
+        "title": "Oluştur",
+        "desc": "Sezgisel aracımızla saniyeler içinde anket oluşturun"
+      },
+      "share": {
+        "title": "Paylaş",
+        "desc": "Her cihazda, her yerde kitlene ulaşın"
+      },
+      "analyze": {
+        "title": "Analiz Et",
+        "desc": "Gerçek zamanlı sonuçlar, güzel görselleştirmeler"
+      }
+    }
+  },
+  "auth": {
+    "welcome": "VoxReal'e Hoş Geldiniz",
+    "signInToContinue": "Anket oluşturmak ve oy vermek için giriş yapın",
+    "email": "E-posta",
+    "password": "Şifre",
+    "signIn": "Giriş Yap",
+    "signingIn": "Giriş yapılıyor...",
+    "noAccount": "Hesabınız yok mu?",
+    "signUp": "Kayıt Ol",
+    "createAccount": "Hesap Oluştur",
+    "joinVoxReal": "VoxReal'e katıl, sesini duyur",
+    "displayName": "Görünen Ad",
+    "yourDisplayName": "Görünen adınız",
+    "atLeast6Chars": "En az 6 karakter",
+    "creatingAccount": "Hesap oluşturuluyor...",
+    "alreadyHaveAccount": "Zaten hesabınız var mı?",
+    "signInLink": "Giriş yap",
+    "enterPassword": "Şifrenizi girin"
+  },
+  "create": {
+    "title": "Anket Oluştur",
+    "subtitle": "Bir soru sor, cevapları al.",
+    "category": "Kategori",
+    "question": "Soru",
+    "questionPlaceholder": "Ne öğrenmek istiyorsun?",
+    "options": "Seçenekler",
+    "optionPlaceholder": "Seçenek {n}",
+    "addOption": "+ Seçenek Ekle",
+    "publish": "Anketi Yayınla",
+    "creating": "Oluşturuluyor...",
+    "failedToCreate": "Anket oluşturulamadı."
+  },
+  "feed": {
+    "loading": "Yükleniyor...",
+    "failedToLoad": "Anketler yüklenemedi",
+    "somethingWrong": "Bir şeyler yanlış gitti",
+    "tryAgain": "Tekrar Dene",
+    "noPolls": "Henüz anket yok",
+    "createFirst": "İlk anketi sen oluştur!",
+    "createPoll": "Anket Oluştur",
+    "allSeen": "Tüm anketleri gördün"
+  },
+  "poll": {
+    "votes": "{count} oy",
+    "skip": "Atla",
+    "voted": "Oylandı",
+    "notFound": "Anket Bulunamadı",
+    "notFoundDesc": "Bu anket mevcut değil veya kaldırılmış.",
+    "browsePolls": "Anketlere Göz At",
+    "back": "Geri"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "switchTo": "Dil değiştir"
+  },
+  "theme": {
+    "light": "Aydınlık tema",
+    "dark": "Koyu tema"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "VoxReal — Hazlo real. Haz que cuente.",
+    "description": "VoxReal es una plataforma global de encuestas. Crea, comparte y vota en encuestas que importan. Haz oír tu voz."
+  },
+  "nav": {
+    "feed": "Feed",
+    "create": "Crear",
+    "profile": "Perfil",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión"
+  },
+  "home": {
+    "slogan": "Hazlo real. Haz que cuente.",
+    "description": "Crea encuestas que importan. Comparte con el mundo. Que cada voz sea escuchada.",
+    "createPoll": "Crear encuesta",
+    "browsePolls": "Explorar encuestas",
+    "features": {
+      "create": {
+        "title": "Crear",
+        "desc": "Crea encuestas en segundos con nuestro constructor intuitivo"
+      },
+      "share": {
+        "title": "Compartir",
+        "desc": "Llega a tu audiencia en cualquier dispositivo, en cualquier lugar"
+      },
+      "analyze": {
+        "title": "Analizar",
+        "desc": "Resultados en tiempo real con hermosas visualizaciones"
+      }
+    }
+  },
+  "auth": {
+    "welcome": "Bienvenido a VoxReal",
+    "signInToContinue": "Inicia sesión para crear y votar encuestas",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "signingIn": "Iniciando sesión...",
+    "noAccount": "¿No tienes cuenta?",
+    "signUp": "Regístrate",
+    "createAccount": "Crear una cuenta",
+    "joinVoxReal": "Únete a VoxReal y haz oír tu voz",
+    "displayName": "Nombre visible",
+    "yourDisplayName": "Tu nombre visible",
+    "atLeast6Chars": "Al menos 6 caracteres",
+    "creatingAccount": "Creando cuenta...",
+    "alreadyHaveAccount": "¿Ya tienes cuenta?",
+    "signInLink": "Inicia sesión",
+    "enterPassword": "Ingresa tu contraseña"
+  },
+  "create": {
+    "title": "Crear encuesta",
+    "subtitle": "Haz una pregunta y obtén respuestas.",
+    "category": "Categoría",
+    "question": "Pregunta",
+    "questionPlaceholder": "¿Qué quieres saber?",
+    "options": "Opciones",
+    "optionPlaceholder": "Opción {n}",
+    "addOption": "+ Añadir opción",
+    "publish": "Publicar encuesta",
+    "creating": "Creando...",
+    "failedToCreate": "No se pudo crear la encuesta."
+  },
+  "feed": {
+    "loading": "Cargando...",
+    "failedToLoad": "No se pudieron cargar las encuestas",
+    "somethingWrong": "Algo salió mal",
+    "tryAgain": "Intentar de nuevo",
+    "noPolls": "Aún no hay encuestas",
+    "createFirst": "¡Crea la primera!",
+    "createPoll": "Crear encuesta",
+    "allSeen": "Has visto todas las encuestas"
+  },
+  "poll": {
+    "votes": "{count} votos",
+    "skip": "Saltar",
+    "voted": "Votado",
+    "notFound": "Encuesta no encontrada",
+    "notFoundDesc": "Esta encuesta no existe o ha sido eliminada.",
+    "browsePolls": "Explorar encuestas",
+    "back": "Volver"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "switchTo": "Cambiar idioma"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  }
+}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useMutation, useQueryClient, useQuery } from '@tanstack/react-query';
+import { useTranslations } from 'next-intl';
 import { apiGet, apiPost, FetchError } from '@/lib/api';
 
 interface Category {
@@ -15,6 +16,7 @@ interface Category {
 export default function CreatePage() {
   const router = useRouter();
   const queryClient = useQueryClient();
+  const t = useTranslations('create');
   const [question, setQuestion] = useState('');
   const [options, setOptions] = useState(['', '']);
   const [selectedCategoryId, setSelectedCategoryId] = useState('');
@@ -39,7 +41,7 @@ export default function CreatePage() {
       router.push('/feed');
     },
     onError: (error: FetchError) => {
-      setErrorMessage(error.message || 'Failed to create poll.');
+      setErrorMessage(error.message || t('failedToCreate'));
     },
   });
 
@@ -60,12 +62,9 @@ export default function CreatePage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
-
     const trimmedQuestion = question.trim();
     const trimmedOptions = options.map((o) => o.trim()).filter((o) => o.length > 0);
-
     if (!trimmedQuestion || trimmedOptions.length < 2 || !selectedCategoryId) return;
-
     createMutation.mutate({
       question: trimmedQuestion,
       options: trimmedOptions,
@@ -78,14 +77,13 @@ export default function CreatePage() {
   return (
     <div className="flex-1 flex flex-col p-4 max-w-lg mx-auto w-full">
       <div className="py-6">
-        <h1 className="text-2xl font-bold mb-1">Create a Poll</h1>
-        <p className="text-sm text-text-muted">Ask a question and get answers.</p>
+        <h1 className="text-2xl font-bold mb-1">{t('title')}</h1>
+        <p className="text-sm text-text-muted">{t('subtitle')}</p>
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-        {/* Category Select */}
         <div>
-          <label className="block text-sm font-semibold mb-2 text-text-muted">Category</label>
+          <label className="block text-sm font-semibold mb-2 text-text-muted">{t('category')}</label>
           <select
             value={selectedCategoryId}
             onChange={(e) => setSelectedCategoryId(e.target.value)}
@@ -99,13 +97,12 @@ export default function CreatePage() {
           </select>
         </div>
 
-        {/* Question Input */}
         <div>
-          <label className="block text-sm font-semibold mb-2 text-text-muted">Question</label>
+          <label className="block text-sm font-semibold mb-2 text-text-muted">{t('question')}</label>
           <textarea
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
-            placeholder="What do you want to know?"
+            placeholder={t('questionPlaceholder')}
             rows={3}
             maxLength={200}
             className="w-full rounded-2xl border-2 border-voxreal-200 dark:border-voxreal-800 bg-card dark:bg-card-dark px-5 py-4 text-base font-medium placeholder:text-text-muted focus:outline-none focus:border-voxreal-500 transition-colors resize-none"
@@ -113,9 +110,8 @@ export default function CreatePage() {
           <p className="text-xs text-text-muted mt-1 text-right">{question.length}/200</p>
         </div>
 
-        {/* Options */}
         <div>
-          <label className="block text-sm font-semibold mb-2 text-text-muted">Options</label>
+          <label className="block text-sm font-semibold mb-2 text-text-muted">{t('options')}</label>
           <div className="flex flex-col gap-3">
             {options.map((option, index) => (
               <div key={index} className="flex items-center gap-2">
@@ -128,7 +124,7 @@ export default function CreatePage() {
                   type="text"
                   value={option}
                   onChange={(e) => updateOption(index, e.target.value)}
-                  placeholder={`Option ${index + 1}`}
+                  placeholder={t('optionPlaceholder', { n: index + 1 })}
                   maxLength={100}
                   className="flex-1 rounded-xl border-2 border-voxreal-200 dark:border-voxreal-800 bg-card dark:bg-card-dark px-4 py-3 text-base font-medium placeholder:text-text-muted focus:outline-none focus:border-voxreal-500 transition-colors"
                 />
@@ -151,7 +147,7 @@ export default function CreatePage() {
               onClick={addOption}
               className="mt-3 w-full rounded-xl border-2 border-dashed border-voxreal-300 dark:border-voxreal-700 px-4 py-3 text-sm font-semibold text-voxreal-600 dark:text-voxreal-400 hover:bg-voxreal-50 dark:hover:bg-voxreal-900/20 transition-colors"
             >
-              + Add Option
+              {t('addOption')}
             </button>
           )}
         </div>
@@ -165,14 +161,11 @@ export default function CreatePage() {
         <button
           type="submit"
           disabled={!isValid || createMutation.isPending}
-          className={`
-            w-full py-4 rounded-2xl font-bold text-lg transition-all duration-200
-            ${
-              isValid && !createMutation.isPending
-                ? 'bg-gradient-to-r from-voxreal-600 to-purple-mid text-white shadow-lg shadow-voxreal-500/30 hover:shadow-xl hover:shadow-voxreal-500/40 hover:scale-[1.02] active:scale-[0.98]'
-                : 'bg-voxreal-200 dark:bg-voxreal-800 text-voxreal-400 cursor-not-allowed'
-            }
-          `}
+          className={`w-full py-4 rounded-2xl font-bold text-lg transition-all duration-200 ${
+            isValid && !createMutation.isPending
+              ? 'bg-gradient-to-r from-voxreal-600 to-purple-mid text-white shadow-lg shadow-voxreal-500/30 hover:shadow-xl hover:shadow-voxreal-500/40 hover:scale-[1.02] active:scale-[0.98]'
+              : 'bg-voxreal-200 dark:bg-voxreal-800 text-voxreal-400 cursor-not-allowed'
+          }`}
         >
           {createMutation.isPending ? (
             <span className="flex items-center justify-center gap-2">
@@ -180,10 +173,10 @@ export default function CreatePage() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Creating...
+              {t('creating')}
             </span>
           ) : (
-            'Publish Poll'
+            t('publish')
           )}
         </button>
       </form>

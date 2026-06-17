@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useTranslations } from 'next-intl';
 import { apiPost } from '@/lib/api';
 
 interface PollCardProps {
@@ -31,6 +32,7 @@ export default function PollCard({
   createdAt,
 }: PollCardProps) {
   const queryClient = useQueryClient();
+  const t = useTranslations('poll');
 
   const [localVote, setLocalVote] = useState<string | null>(null);
   const [localOptions, setLocalOptions] = useState(initialOptions);
@@ -166,7 +168,7 @@ export default function PollCard({
       <div className="flex items-center justify-between px-5 pt-14 pb-2 z-10 shrink-0">
         <div className="flex items-center gap-2">
           <span className="text-xs font-semibold uppercase tracking-wider text-voxreal-500 dark:text-voxreal-400 bg-voxreal-100/50 dark:bg-voxreal-900/30 px-3 py-1 rounded-full">
-            {category || (createdAt ? new Date(createdAt).toLocaleDateString() : 'Anket')}
+            {category || (createdAt ? new Date(createdAt).toLocaleDateString() : '')}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -279,12 +281,12 @@ export default function PollCard({
               }
             `}
           >
-            {userVote ? 'Geç →' : 'Atla →'}
+            {userVote ? `${t('skip')} →` : `${t('skip')} →`}
           </button>
 
           {/* Vote count */}
           <span className="text-xs text-text-muted dark:text-text-muted-dark tabular-nums">
-            {totalVotes} oy
+            {t('votes', { count: totalVotes })}
           </span>
         </div>
 

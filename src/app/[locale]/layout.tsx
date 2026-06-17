@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
+import "../globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { QueryProvider } from "@/components/QueryProvider";
 import AuthProvider from "@/components/AuthProvider";
@@ -17,9 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VoxReal — Make it real. Make it count.",
-  description:
-    "VoxReal is a global polling platform. Create, share, and vote on polls that matter. Make your voice heard.",
+  title: "VoxReal",
+  description: "VoxReal — Gerçek olsun, etkisi olsun.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -42,14 +45,24 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -70,16 +83,17 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-surface text-text dark:bg-surface-dark dark:text-text-dark">
-        <ThemeProvider>
-          <AuthProvider>
-            <QueryProvider>
-              <NavBar />
-              <main className="flex-1 flex flex-col">{children}</main>
-            </QueryProvider>
-          </AuthProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <AuthProvider>
+              <QueryProvider>
+                <NavBar />
+                <main className="flex-1 flex flex-col">{children}</main>
+              </QueryProvider>
+            </AuthProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
 
-        {/* Register Service Worker */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

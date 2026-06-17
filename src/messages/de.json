@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "VoxReal — Mach es echt. Lass es zählen.",
+    "description": "VoxReal ist eine globale Umfrageplattform. Erstelle, teile und stimme über Umfragen ab, die wichtig sind. Mach deine Stimme hörbar."
+  },
+  "nav": {
+    "feed": "Feed",
+    "create": "Erstellen",
+    "profile": "Profil",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden"
+  },
+  "home": {
+    "slogan": "Mach es echt. Lass es zählen.",
+    "description": "Erstelle Umfragen, die zählen. Teile sie mit der Welt. Lass jede Stimme gehört werden.",
+    "createPoll": "Umfrage erstellen",
+    "browsePolls": "Umfragen entdecken",
+    "features": {
+      "create": {
+        "title": "Erstellen",
+        "desc": "Erstelle Umfragen in Sekunden mit unserem intuitiven Builder"
+      },
+      "share": {
+        "title": "Teilen",
+        "desc": "Erreiche dein Publikum auf jedem Gerät, überall"
+      },
+      "analyze": {
+        "title": "Analysieren",
+        "desc": "Echtzeit-Ergebnisse mit schönen Visualisierungen"
+      }
+    }
+  },
+  "auth": {
+    "welcome": "Willkommen bei VoxReal",
+    "signInToContinue": "Melde dich an, um Umfragen zu erstellen und abzustimmen",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "signIn": "Anmelden",
+    "signingIn": "Anmeldung...",
+    "noAccount": "Noch kein Konto?",
+    "signUp": "Registrieren",
+    "createAccount": "Konto erstellen",
+    "joinVoxReal": "Tritt VoxReal bei und mach deine Stimme hörbar",
+    "displayName": "Anzeigename",
+    "yourDisplayName": "Dein Anzeigename",
+    "atLeast6Chars": "Mindestens 6 Zeichen",
+    "creatingAccount": "Konto wird erstellt...",
+    "alreadyHaveAccount": "Bereits ein Konto?",
+    "signInLink": "Anmelden",
+    "enterPassword": "Gib dein Passwort ein"
+  },
+  "create": {
+    "title": "Umfrage erstellen",
+    "subtitle": "Stelle eine Frage und erhalte Antworten.",
+    "category": "Kategorie",
+    "question": "Frage",
+    "questionPlaceholder": "Was möchtest du wissen?",
+    "options": "Optionen",
+    "optionPlaceholder": "Option {n}",
+    "addOption": "+ Option hinzufügen",
+    "publish": "Umfrage veröffentlichen",
+    "creating": "Wird erstellt...",
+    "failedToCreate": "Umfrage konnte nicht erstellt werden."
+  },
+  "feed": {
+    "loading": "Lädt...",
+    "failedToLoad": "Umfragen konnten nicht geladen werden",
+    "somethingWrong": "Etwas ist schief gelaufen",
+    "tryAgain": "Erneut versuchen",
+    "noPolls": "Noch keine Umfragen",
+    "createFirst": "Erstelle die erste!",
+    "createPoll": "Umfrage erstellen",
+    "allSeen": "Du hast alle Umfragen gesehen"
+  },
+  "poll": {
+    "votes": "{count} Stimmen",
+    "skip": "Überspringen",
+    "voted": "Abgestimmt",
+    "notFound": "Umfrage nicht gefunden",
+    "notFoundDesc": "Diese Umfrage existiert nicht oder wurde entfernt.",
+    "browsePolls": "Umfragen durchsuchen",
+    "back": "Zurück"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "switchTo": "Sprache wechseln"
+  },
+  "theme": {
+    "light": "Helles Thema",
+    "dark": "Dunkles Thema"
+  }
+}

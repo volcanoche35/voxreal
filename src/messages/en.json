@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "VoxReal — Make it real. Make it count.",
+    "description": "VoxReal is a global polling platform. Create, share, and vote on polls that matter. Make your voice heard."
+  },
+  "nav": {
+    "feed": "Feed",
+    "create": "Create",
+    "profile": "Profile",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "home": {
+    "slogan": "Make it real. Make it count.",
+    "description": "Create polls that matter. Share with the world. Let every voice be heard.",
+    "createPoll": "Create a Poll",
+    "browsePolls": "Browse Polls",
+    "features": {
+      "create": {
+        "title": "Create",
+        "desc": "Build polls in seconds with our intuitive builder"
+      },
+      "share": {
+        "title": "Share",
+        "desc": "Reach your audience on any device, anywhere"
+      },
+      "analyze": {
+        "title": "Analyze",
+        "desc": "Real-time results with beautiful visualizations"
+      }
+    }
+  },
+  "auth": {
+    "welcome": "Welcome to VoxReal",
+    "signInToContinue": "Sign in to create and vote on polls",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "createAccount": "Create an Account",
+    "joinVoxReal": "Join VoxReal and make your voice heard",
+    "displayName": "Display Name",
+    "yourDisplayName": "Your display name",
+    "atLeast6Chars": "At least 6 characters",
+    "creatingAccount": "Creating account...",
+    "alreadyHaveAccount": "Already have an account?",
+    "signInLink": "Sign in",
+    "enterPassword": "Enter your password"
+  },
+  "create": {
+    "title": "Create a Poll",
+    "subtitle": "Ask a question and get answers.",
+    "category": "Category",
+    "question": "Question",
+    "questionPlaceholder": "What do you want to know?",
+    "options": "Options",
+    "optionPlaceholder": "Option {n}",
+    "addOption": "+ Add Option",
+    "publish": "Publish Poll",
+    "creating": "Creating...",
+    "failedToCreate": "Failed to create poll."
+  },
+  "feed": {
+    "loading": "Loading...",
+    "failedToLoad": "Failed to load polls",
+    "somethingWrong": "Something went wrong",
+    "tryAgain": "Try Again",
+    "noPolls": "No polls yet",
+    "createFirst": "Create the first one!",
+    "createPoll": "Create Poll",
+    "allSeen": "You've seen all polls"
+  },
+  "poll": {
+    "votes": "{count} votes",
+    "skip": "Skip",
+    "voted": "Voted",
+    "notFound": "Poll Not Found",
+    "notFoundDesc": "This poll doesn't exist or has been removed.",
+    "browsePolls": "Browse Polls",
+    "back": "Back"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "switchTo": "Switch language"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  }
+}
